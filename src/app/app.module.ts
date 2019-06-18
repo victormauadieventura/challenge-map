@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeadersComponent } from './headers/headers.component';
-import { LayerComponent } from './modules/layer/layer.component';
 
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { MapComponent } from './modules/map/map.component';
@@ -13,7 +12,6 @@ import { MapComponent } from './modules/map/map.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LayerComponent,
     HeadersComponent,
     MapComponent
   ],
