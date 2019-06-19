@@ -143,7 +143,7 @@ export class MapComponent implements OnInit {
 
     console.log(feature);
     if (feature.properties) {
-      layer.bindPopup();
+      layer.bindPopup(feature.properties.cd_prope);
     }
   }
 
