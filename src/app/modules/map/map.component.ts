@@ -134,17 +134,15 @@ export class MapComponent implements OnInit {
   }
 
   onEachFeature(feature, layer) {
+    const properties = [];
 
-    // const items = [];
+    Object.keys(feature.properties).map(key => {
+      if (!(feature.properties[key] === '-' || feature.properties[key] === '')) {
+        properties.push([key, feature.properties[key]].join(': '));
+      }
+    });
 
-    // feature.properties.forEach(item => {
-    //   items.push(item);
-    // });
-
-    console.log(feature);
-    if (feature.properties) {
-      layer.bindPopup(feature.properties.cd_prope);
-    }
+    layer.bindPopup(properties.join('<br>'));
   }
 
   showMarkes() {
